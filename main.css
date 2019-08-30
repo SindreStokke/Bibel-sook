@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Panforte;
+  src: url(fonts/zetafonts_panforte/Panforte_Pro_Bold.ttf);
+}
+
+body {
+  margin: 0; padding: 0; border: 0; outline: 0;
+  font-family: Roboto Condensed;
+  background-color: #E1EFF6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.top {
+  background-color: #2E4057;
+  font-family: Cuprum;
+  font-size: 40px;
+  color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 20px;
+}
+
+.menu {
+  width:60%;
+  font-family: Roboto Condensed;
+  font-size: 20px;
+  color: #FFFFFF;
+  padding-top: 16px;
+  padding-right: 20px;
+  text-align: right;
+  float: right;
+}
+
+.front_text {
+  height: 80px;
+  font-family: Tillana;
+  font-size: 50px;
+  text-align: center;
+  color: #DD9055;
+  padding-top: 60px;
+}
+
+.front {
+  height: 600px;
+  margin: 0;
+  background-image: url(grafikk/frontbilde.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search {
+  margin-top: 50px;
+  margin: 100px;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+}
+
+.overskrift {
+  font-size: 35px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #38AECC;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+}
+
+.tekst {
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: black;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.5;
+}
+.fremhevet_tekst {
+  font-size: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+
+.bot {
+  background-color: #2E4057;
+  font-size: 13px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.bot_tittel {
+  font-family: Cuprum;
+  font-size: 40px;
+  padding-top: 30px;
+}
+.bot_menu {
+  font-size: 20px;
+}

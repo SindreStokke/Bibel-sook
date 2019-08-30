@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <title>Bible search</title>
+  <link rel="icon" href="grafikk/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Cuprum|Tillana|Roboto+Condensed" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top">
+    <a href="index.html">Bibelsøk</a>
+  </div>
+  <div class="front">
+    <div class="front_text">
+      <div class="search">
+        <select class="book_selection" id="book_selection" name="book_selection" autofocus>
+          <option value="GEN">1. Mosebok</option>
+          <option value="EXO">2. Mosebok</option>
+          <option value="LEV">3. Mosebok</option>
+          <option value="NUM">4. Mosebok</option>
+          <option value="DEU">5. Mosebok</option>
+          <option value="JOS">Josva</option>
+          <option value="JDG">Dommerne</option>
+          <option value="RUT">Rut</option>
+          <option value="1SA">1. Samuelsbok</option>
+          <option value="2SA">2. Samuelsbok</option>
+          <option value="1KI">1. Kongebok</option>
+          <option value="2KI">2. Kongebok</option>
+          <option value="1CH">1. Krønikerbok</option>
+          <option value="2CH">2. Krønikerbok</option>
+          <option value="EZR">Esra</option>
+          <option value="NEH">Nehemja</option>
+          <option value="EST">Ester</option>
+          <option value="JOB">Job</option>
+          <option value="PSA">Salmene</option>
+          <option value="PRO">Ordspråkene</option>
+          <option value="ECC">Forkynneren</option>
+          <option value="SNG">Høysangen</option>
+          <option value="ISA">Jesaja</option>
+          <option value="JER">Jeremia</option>
+          <option value="LAM">Klagesangene</option>
+          <option value="EZK">Esekiel</option>
+          <option value="Dan">Daniel</option>
+          <option value="HOS">Hosea</option>
+          <option value="JOL">Joel</option>
+          <option value="AMO">Amos</option>
+          <option value="OBA">Obadja</option>
+          <option value="JON">Jona</option>
+          <option value="MIC">Mika</option>
+          <option value="NAM">Nahum</option>
+          <option value="HAB">Habakkuk</option>
+          <option value="ZEP">Sefanja</option>
+          <option value="HAG">Haggai</option>
+          <option value="ZEC">Sakarja</option>
+          <option value="MAL">Malaki</option>
+          <option value="MAT">Matteus</option>
+          <option value="MRK">Markus</option>
+          <option value="LUK">Lukas</option>
+          <option value="JHN">Johannes</option>
+          <option value="ACT">Apostelenes gjerninger</option>
+          <option value="ROM">Romerne</option>
+          <option value="1CO">1. Korinter</option>
+          <option value="2CO">2. Korinter</option>
+          <option value="GAL">Galaterne</option>
+          <option value="EPH">Efeserne</option>
+          <option value="PHP">Filipperne</option>
+          <option value="COL">Kolosserne</option>
+          <option value="1TH">1. Tessaloniker</option>
+          <option value="2TH">2. Tessaloniker</option>
+          <option value="1TI">1. Timoteus</option>
+          <option value="2TI">2. Timoteus</option>
+          <option value="TIT">Titus</option>
+          <option value="PHM">Filemon</option>
+          <option value="HEB">Hebreerne</option>
+          <option value="JAS">Jakob</option>
+          <option value="1PE">1. Peter</option>
+          <option value="2PE">2. Peter</option>
+          <option value="1JN">1. Johannes</option>
+          <option value="2JN">2. Johannes</option>
+          <option value="3JN">3. Johannes</option>
+          <option value="JUD">Judas</option>
+          <option value="REV">Johannes Åpenbaring</option>
+        </select>
+        <input type="text" id="chapter_selection" placeholder="Kapittel">
+        <input type="text" id="verse_selection" placeholder="Vers">
+        <input type="submit" id="search" value="Søk">
+      </div>
+    </div>
+  </div>
+
+  <div class="bot">
+    <div class="bot_menu"><a href="#lenke_1_overskrift">Lenke 1</a> &nbsp;-&nbsp; <a href="#lenke_2_overskrift">Lenke 2</a> &nbsp;-&nbsp; <a href="#lenke_3_overskrift">Lenke 3</a></div>
+    <div class="bot_tittel"><a href="index.html">Bibelsøk</a></div>
+  </div>
+
+
+  <script type="text/javascript">
+
+  window.onload = oppstart;
+
+  var book = document.getElementById('book_selection').value;
+  var chapter = document.getElementById('chapter_selection').value;
+  var verse = document.getElementById('verse_selection').value;
+
+  function oppstart() {
+    document.getElementById("search").onclick = go_to;
+    document.getElementById("book_selection").onkeyup = go_enter;
+    document.getElementById("chapter_selection").onkeyup = go_enter;
+    document.getElementById("verse_selection").onkeyup = go_enter;
+    document.getElementById("search").onkeyup = go_enter;
+  }
+
+  function go_to() {
+    window.location.href = "https://www.bible.com/no/bible/29/" + document.getElementById('book_selection').value +"."+ document.getElementById('chapter_selection').value +"."+ document.getElementById('verse_selection').value;
+  }
+
+  function go_enter() {
+    if (event.keyCode == 13) {
+      window.location.href = "https://www.bible.com/no/bible/29/" + document.getElementById('book_selection').value +"."+ document.getElementById('chapter_selection').value +"."+ document.getElementById('verse_selection').value;
+    }
+  }
+
+  </script>
+</body>
+
+</html>
